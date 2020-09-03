@@ -87,7 +87,8 @@ elseif (isset($_POST['acao']) && ($_POST['acao']== "Cadastrar"))
 				if($retorno)
 				{
 					echo "Você se cadastrou";
-					header ('Location:/tcc/src/index.html');
+					//header ('Location:/tcc/src/index.html');
+					header ('Location:/index.html');
 				}
 				else
 				{
@@ -194,9 +195,7 @@ elseif (isset($_GET['acao'])&&($_GET['acao']=="logout")){
 	//var_dump($_SESSION);
 	//die();
 	//o codigo abaixo voltava para uma determinada pag dps do logout
-	//header ('Location: ../index.html');
-	header ('Location: /MeuTCC/tcc/index.html');
+	header ('Location: /index.html');
 }	
 ?>
 	<p><a href="../view/logado.php">Voltar</a> 
-<!--	<p><a href="../view/login.php">Voltar</a> --> 
