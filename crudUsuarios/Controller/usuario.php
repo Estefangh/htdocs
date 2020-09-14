@@ -37,7 +37,8 @@ elseif (isset($_POST['acao']) && ($_POST['acao']== "Cadastrar"))
 		$cpf = $_POST['cpf'];
 		$endereco = $_POST['endereco'];
 		$login = $_POST['login'];
-		$senha = md5($_POST['senha']);
+		//$senha = md5($_POST['senha']);
+		$senha = $_POST['senha'];
 		$status = 1;
 	//	$imagem = $_POST['imagem'];
 		//INCLUSÃO DE IMAGEM
@@ -106,7 +107,8 @@ elseif (isset($_POST['acao']) && ($_POST['acao']== "Salvar Dados"))
 	$cpf = $_POST['cpf'];
 	$endereco = $_POST['endereco'];
 	$login = $_POST['login'];
-	$senha = md5($_POST['senha']);
+	//$senha = md5($_POST['senha']);
+	$senha = $_POST['senha'];
 	$status = 1;
 
 	$usuario = new Usuario();
@@ -179,8 +181,11 @@ elseif (isset($_GET['acao']) && ($_GET['acao'] == "Listar"))
 /***** Faz o login do usuário *****/
 elseif (isset($_POST['acao']) && ($_POST['acao']=="Logar"))
 {
-	$login = $_POST['login'];
-	$senha = $_POST['senha'];
+//	$login = $_POST['login'];
+//	$senha = $_POST['senha'];
+
+	$login = addslashes($_POST['login']);
+	$senha = addslashes($_POST['senha']);
 		if($usuarioDAO->logar($login,$senha)){
 			header ('Location:../view/logado.php');
 		}
@@ -198,4 +203,5 @@ elseif (isset($_GET['acao'])&&($_GET['acao']=="logout")){
 	header ('Location: /index.html');
 }	
 ?>
-	<p><a href="../view/logado.php">Voltar</a> 
+	<!-- <p><a href="../view/logado.php">Voltar</a> -->
+	<p><a href="/index.html">Voltar</a>

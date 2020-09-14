@@ -166,6 +166,7 @@ private $tabela; //nome da tabela
 			$resultado=$this->pdo->prepare('SELECT id_usuario, nome FROM usuarios WHERE login=:login and senha=:senha and status=1');
 			$resultado->bindValue(':login',$login);
 			$resultado->bindValue(':senha',$senha);
+		//	$resultado->bindValue(':senha',md5($senha));
 			if($resultado->execute()) {
 				$linhas=$resultado->rowCount();
 				if($linhas > 0) {
