@@ -239,4 +239,4 @@ private $tabela; //nome da tabela
         $ultimo=$retorno['id'];
         return $ultimo;
     }*/
-?> 
+?>

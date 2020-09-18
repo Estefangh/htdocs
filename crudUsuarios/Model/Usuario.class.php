@@ -1,6 +1,5 @@
 <?php
-
-	class Usuario {
+	class Usuario{
 	private $id_usuario;
 	private $nome;
 	private $email;
@@ -10,7 +9,6 @@
 	private $endereco;
 	private $login;
 	private $senha;
-	//não sei se é necessário esse private status de baixo
 	private $status;
 	private $imagem;
 
@@ -103,4 +101,3 @@
 		}
 	}
 ?>
- 
