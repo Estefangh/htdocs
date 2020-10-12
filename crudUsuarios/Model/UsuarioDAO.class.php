@@ -167,6 +167,16 @@ private $tabela; //nome da tabela
 			$resultado->bindValue(':login',$login);
 			$resultado->bindValue(':senha',$senha);
 		//	$resultado->bindValue(':senha',md5($senha));
+		$resultado->execute(); 
+			
+		//teste no servidor sem o var_dump
+		$registro=$resultado->fetch();
+		$_SESSION['id_usuario']=$registro['id_usuario'];
+		$_SESSION['nome']=$registro['nome'];
+		return true;
+
+		//salvando o código que funciona
+		/* 
 			if($resultado->execute()) {
 				$linhas=$resultado->rowCount();
 				if($linhas > 0) {
@@ -179,7 +189,8 @@ private $tabela; //nome da tabela
 				else {
 					 return false;
 				}
-			}			
+			}	
+		*/
 		}
 		catch (PDOException  $e) {
   			 print $e->getMessage();
