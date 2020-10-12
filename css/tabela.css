@@ -34,6 +34,12 @@
 .weekly{
   color: #fff;
 }
+td {
+  margin: 10px;
+}
+th {
+  margin: 10px;
+}
 .selecttime {
   font-style: italic;
   font-size: 16px;
@@ -42,4 +48,17 @@
   margin: auto;
   text-align: center;
   margin-top: 10px;
+}
+.freebtn {
+  color: black;
+  background-color: white;
+  border-radius: 7px;
+  padding-left: 5px;
+  font-weight: bold;
+}
+.occupiedbtn {
+  color: #808080;
+  background-color: #DADADA;
+  border-radius: 10px;
+  padding-left: 5px;
 }
