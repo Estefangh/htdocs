@@ -42,6 +42,7 @@ elseif (isset($_POST['acao']) && ($_POST['acao']== "Cadastrar"))
 		$status = 1;
 	//	$imagem = $_POST['imagem'];
 		//INCLUSÃO DE IMAGEM
+		/*
 		$limitar_ext="sim";
 		$extensoes_validas=array(".gif",".jpg",".png",".jpeg",".bmp",".GIF",".JPG",".PNG",".JPEG",".BMP",);
 		$caminho="../view/imagens";
@@ -68,6 +69,7 @@ elseif (isset($_POST['acao']) && ($_POST['acao']== "Cadastrar"))
 			} else {
 				die("Selecione o arquivo a ser enviado");
 			}
+			*/
 			//INCLUSÃO DE IMAGEM
 
 		$usuario = new Usuario();
