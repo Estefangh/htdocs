@@ -83,7 +83,7 @@ elseif (isset($_POST['acao']) && ($_POST['acao']== "Cadastrar"))
 		$usuario->setSenha($senha);
 		$usuario->setStatus($status);
 		//imagem
-		$usuario->setImagem($nome_arquivo);
+		//$usuario->setImagem($nome_arquivo);
 	//var_dump ($usuarioDAO);
 	//die();
 			$retorno=$usuarioDAO->inserir($usuario);
@@ -175,9 +175,9 @@ elseif (isset($_GET['acao']) && ($_GET['acao'] == "Listar"))
 		echo "Endereço: ".$listar[$i]['endereco']." - ";
 		echo "login:".$listar[$i]['login']." - ";
 		echo "senha:".$listar[$i]['senha']." - ";
-		echo "imagem:".$listar[$i]['imagem']."<br>";
+		//echo "imagem:".$listar[$i]['imagem']."<br>";
 		//inclui a imagem na hora de listar os dados do usuário
-		echo "<img src='../View/imagens/".$listar[$i]['imagem']."' height ='100px'>";
+		//echo "<img src='../View/imagens/".$listar[$i]['imagem']."' height ='100px'>";
 	}
 }
 /***** Faz o login do usuário *****/

@@ -10,7 +10,7 @@
 	private $login;
 	private $senha;
 	private $status;
-	private $imagem;
+	//private $imagem;
 
 		public function setId_Usuario($id_usuario) {
 			 $this->id_Usuario=$id_usuario;
@@ -91,7 +91,7 @@
 		public function getStatus() {
 			return $this->status;
 		}
-
+		/*
 		public function setImagem($imagem) {
 			 $this->imagem=$imagem;
 		}
@@ -99,5 +99,6 @@
 		public function getImagem() {
 			return $this->imagem;
 		}
+		*/
 	}
 ?>

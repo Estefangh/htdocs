@@ -26,7 +26,7 @@ private $tabela; //nome da tabela
 		$senha=$usuario->getSenha();
 		$status=$usuario->getStatus();
 		//insere a imagem
-		$imagem=$usuario->getImagem();
+		//$imagem=$usuario->getImagem();
 		
 		//testa se o login já está em uso
 		$teste=$this->pdo->prepare('SELECT login FROM usuarios WHERE login=:login');
@@ -42,7 +42,7 @@ private $tabela; //nome da tabela
 				return false;
 			}
 			else{
-				$resultado=$this->pdo->prepare('INSERT INTO usuarios(nome, email, telefone, dnasc, cpf, endereco, login, senha, status, imagem ) values(:nome,:email,:telefone,:dnasc,:cpf,:endereco,:login,:senha,:status,:imagem)');
+				$resultado=$this->pdo->prepare('INSERT INTO usuarios(nome, email, telefone, dnasc, cpf, endereco, login, senha, status) values(:nome,:email,:telefone,:dnasc,:cpf,:endereco,:login,:senha,:status)');
 			
 			//$sql = "INSERT INTO $this->tabela (nome, endereco, email, rg, cpf, senha, login, status ) values ('$nome','$endereco','$email','$rg','$cpf','$senha','$login','$status')";
 				$resultado->bindValue(':nome',$nome);
@@ -54,7 +54,7 @@ private $tabela; //nome da tabela
 				$resultado->bindValue(':login',$login);
 				$resultado->bindValue(':senha',$senha);
 				$resultado->bindValue(':status',$status);
-				$resultado->bindValue(':imagem',$imagem);
+				//$resultado->bindValue(':imagem',$imagem);
 				
 				$dados = $resultado->execute();//retorna true se incluiu
 				if($dados){
