@@ -116,7 +116,7 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group col-sm-6">
-                            <label>Digite seu nome de usuário</label>
+                            <label>Defina um nome de usuário</label>
                             <input type="text" class="form-control" placeholder="Ex: Fulanosilva" name="login" required>
                         </div>
                         <div class="form-group col-sm-6">
