@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-include_once "../Model/Usuario.class.php";
-include_once "../Model/UsuarioDAO.class.php";
+include_once "../model/Usuario.class.php";
+include_once "../model/UsuarioDAO.class.php";
 
 $usuarioDAO=new UsuarioDAO();
 /*************** Altera usuário logado ***************/	
@@ -89,9 +89,12 @@ elseif (isset($_POST['acao']) && ($_POST['acao']== "Cadastrar"))
 			$retorno=$usuarioDAO->inserir($usuario);
 				if($retorno)
 				{
-					echo "Você se cadastrou";
-					//header ('Location:/tcc/src/index.html');
-					header ('Location:/index.html');
+					$_SESSION['msg'] = "<div class='alert alert-sucess'>Você se cadastrou com sucesso!</div>";
+					header ('Location: ../view/cadastra.php');
+					//o que estava implementado vai daqui
+					//echo "Você se cadastrou";
+					//header ('Location:/index.html');
+					//até aqui
 				}
 				else
 				{
@@ -177,7 +180,7 @@ elseif (isset($_GET['acao']) && ($_GET['acao'] == "Listar"))
 		echo "senha:".$listar[$i]['senha']." - ";
 		//echo "imagem:".$listar[$i]['imagem']."<br>";
 		//inclui a imagem na hora de listar os dados do usuário
-		//echo "<img src='../View/imagens/".$listar[$i]['imagem']."' height ='100px'>";
+		//echo "<img src='../view/imagens/".$listar[$i]['imagem']."' height ='100px'>";
 	}
 }
 /***** Faz o login do usuário *****/

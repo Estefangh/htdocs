@@ -13,9 +13,9 @@ echo $_SESSION['msg'];
 </head>
 <body>
 <!--
-<form name="login" action="../src/crudUsuarios/Controller/usuario.php" method="post"> 
+<form name="login" action="../src/usuarios/controller/usuario.php" method="post"> 
  -->
-	<form name="login" action="../Controller/usuario.php" method="post"> 
+	<form name="login" action="../controller/usuario.php" method="post"> 
 
 		<label for ="usuario"> Usuário: </label><br>
 		<input type="text" name="login" id="user" required><br>

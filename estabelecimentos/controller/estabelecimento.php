@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-include_once "../Model/Estabelecimento.class.php";
-include_once "../Model/EstabelecimentoDAO.class.php";
+include_once "../model/Estabelecimento.class.php";
+include_once "../model/EstabelecimentoDAO.class.php";
 
 
 $EstabelecimentoDAO=new EstabelecimentoDAO();

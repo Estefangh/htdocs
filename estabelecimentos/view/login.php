@@ -13,7 +13,7 @@ echo $_SESSION['msg'];
 </head>
 <body>
 <!--form action="/action_page.php" method="get" -->
-	<form name="login" action="../Controller/estabelecimento.php" method="post"> 
+	<form name="login" action="../controller/estabelecimento.php" method="post"> 
 		<label for ="estabelecimento"> Estabelecimento: </label><br>
 		<input type="text" name="login" id="user" required><br>
 		<label for ="senha"> Senha: </label><br>

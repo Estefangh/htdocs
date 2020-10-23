@@ -6,14 +6,14 @@
     <link rel="stylesheet" href="/css/styles.css">  
 </head>
 <body>
-
-    <?php 
-        session_start();
+<?php 
         if(isset($_SESSION['msg'])) {
+            session_start();
             echo $_SESSION['msg'];
             unset($_SESSION['msg']); 
         }
     ?>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="/index.html">IPlay</a>
@@ -35,7 +35,7 @@
               <a class="nav-link" href="/index.html#contact">Contato</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="crudEstabelecimentos/view/cadastra.php">Possui um centro esportivo?</a>
+              <a class="nav-link" href="estabelecimentos/view/cadastra.php">Possui um centro esportivo?</a>
           </li>
           <li class="nav-item" data-toggle="modal" data-target="#modalLogin" data-whatever="@getbootstrap">
               <a class="nav-link active" href="#">Cadastro</a>
@@ -51,9 +51,9 @@
                   </button>
                 </div>
                   <div class="modal-body">
-                  <!--  <form name="login" action="../tcc/crudUsuarios/Controller/usuario.php" method="post"> -->
-                  <!--  <form name="login" action="../crudUsuarios/Controller/usuario.php" method="post">--> 
-                      <form name="login" action="../crudUsuarios/Controller/usuario.php" method="post"> 
+                  <!--  <form name="login" action="../tcc/usuarios/controller/usuario.php" method="post"> -->
+                  <!--  <form name="login" action="../usuarios/controller/usuario.php" method="post">--> 
+                      <form name="login" action="../usuarios/controller/usuario.php" method="post"> 
                         <div class="form-group">
                           <label for="usuario" class="col-form-label">Nome de usuário ou e-mail:</label>
                           <input type="text" name="login" class="form-control" id="user" required>
@@ -63,7 +63,7 @@
                           <input type="password" name="senha" class="form-control" id="senha" required>
                         </div>
                         <div class="row" class="modal-footer">
-                        <div class="col-auto mr-auto">  <p><a href="../crudUsuarios/view/cadastra.php">Não possui uma conta? Cadastre-se</a> </div>  
+                        <div class="col-auto mr-auto">  <p><a href="../usuarios/view/cadastra.php">Não possui uma conta? Cadastre-se</a> </div>  
                         <div class="col-auto"> <button type="submit" name="acao" value="Logar" class="btn btn-secondary">Entrar</button> </div>
                         <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
                         </div>
