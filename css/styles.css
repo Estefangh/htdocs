@@ -89,4 +89,16 @@ header.masthead p {
     /* background-color: rgba(0,0,0,0.8); */
     color: yellow;
     font-size: 4rem; } }
+
+  /*tentando configurar a barra de scroll*/
+    ::-webkit-scrollbar-track {
+      background-color: #6c757d;
+  }
+  ::-webkit-scrollbar {
+      width: 6px;
+      background: #F4F4F4;
+  }
+  ::-webkit-scrollbar-thumb {
+      background: #343a40;
+  }
   
