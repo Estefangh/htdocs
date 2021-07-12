@@ -1,0 +1,16 @@
+nome do banco: tcc
+tabela:usuarios
+
+id_usuario (?)
+nome
+email
+telefone
+dnasc
+cpf
+endereco
+login
+senha
+status(?)
+
+
+email professora: zechlinski@pelotas.ifsul.edu.br

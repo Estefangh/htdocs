@@ -2,7 +2,8 @@ section#contact {
   background-color: #212529;
   background-image: url("../assets/map-image.png");
   background-repeat: no-repeat;
-  background-position: center; }
+  background-position: center;
+ }
 
 section#contact .section-heading {
   color: #fff; }
@@ -54,10 +55,14 @@ header.masthead {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+   }
 
 #imgTeaser {
   background-size: 100%; }
+
+.shadow-blue {
+  color: white; text-shadow: 0 0 0.2em #000, 0 0 0.2em #000, 0 0 0.2em #000 }
 
 header.masthead hr {
   margin-top: 30px;
